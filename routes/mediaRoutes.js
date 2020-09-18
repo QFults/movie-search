@@ -13,11 +13,11 @@ router.post('/media', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.put('/media/:id', (req, res) => {
-  Media.findByIdAndUpdate(req.params.id, req.body)
-    .then(media => res.json(media))
-    .catch(err => console.log(err))
-})
+// router.put('/media/:id', (req, res) => {
+//   Media.findByIdAndUpdate(req.params.id, req.body)
+//     .then(media => res.json(media))
+//     .catch(err => console.log(err))
+// })
 
 router.delete('/media/:id', (req, res) => {
   Media.findById(req.params.id)
