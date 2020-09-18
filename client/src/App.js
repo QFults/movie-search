@@ -1,21 +1,18 @@
 import React from 'react'
 import Home from './pages/Home'
 import Saved from './pages/Saved'
+import Navbar from './components/Navbar'
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom'
 
 const App = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/saved">Saved</Link>
-        </nav>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/saved" component={Saved} />
